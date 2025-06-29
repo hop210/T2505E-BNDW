@@ -1,0 +1,26 @@
+.gioithieu{
+    font-style: italic;
+    color: orangered;
+    text-align: right;
+    font-family: "Roboto";
+}
+.canhan{
+    text-align: center;
+    line-height: 5px;
+}
+.ten{
+    color: orangered;
+}
+.tomtat{
+    color: orangered;
+}
+.kinhnghiem{
+    color: orangered;
+}
+.ketqua{
+    background-color: rgb(218, 218, 218);
+
+}
+div{
+    text-indent: 15px;
+}

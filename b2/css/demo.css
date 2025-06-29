@@ -1,0 +1,32 @@
+h1{
+    color: red;
+}
+p{
+    color: #31863f;
+    font-size: 15px;
+    /* cỡ chữ */
+    line-height: 1.5; 
+     /* độ cao dòng */
+     text-align: center;
+     /* căn dòng  (justify căn đều) */
+     font-family: "Roboto";
+     font-weight: 400; /* thin-100 extra-thin:200 normal-400  medium-500 semi-bold:600 bold-700 extra-bold:800 black-900 */
+    text-decoration: none; /* underline line-through overline none */
+    text-transform: none; /* uppercase lowercase capitalize none*/
+    width: 600px;
+    font-style: normal;
+    word-spacing: 0.5px;
+    background-color: aliceblue; /* màu nền*/
+    border-bottom: 2px solid yellow;
+
+}
+a{
+    color: rgb(200, 20, 155);
+    text-decoration: none;
+}
+
+body{
+    background-color: antiquewhite;
+    background-image: url("../../b1/images/meomeo.jpg");
+    background-size: cover;
+}
