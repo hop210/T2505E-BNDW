@@ -1,0 +1,70 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 300ms;
+}
+body{
+    background-color: #fafafa;
+    font-size: 14px;
+    font-family: 'Roboto';
+    font-weight: 400;
+    line-height: 1.25;
+    text-align: left;
+}
+
+img{
+    max-width: 100%;  /* ảnh to quá thì thu lại ảnh nhỏ thì sẽ phóng to */
+}
+a{
+    text-decoration: none;
+    color: blue;
+}
+a:hover{
+    color: aqua;
+}
+p{
+    margin-bottom: 10px;
+}
+/* layout */
+.section{
+    float: left;
+    width: 100%;
+}
+.container{
+    float: none;
+    margin: 0 auto;
+    width: 1200px;
+}
+/* end */
+/* .nav{
+    background-color: green;
+} */
+
+/* content */
+.a-left{
+    float: left;
+    width: 25%;
+}
+.content{
+    float: left;
+    width: 75%;
+}
+.a-right{
+    float: right;
+    width: 25%;
+}
+.three-columns .content{
+    width: 50%;
+}
+
+@media screen and (max-width: 1333px){
+    .container{
+        width: 1100px;
+    }
+}
+@media screen and (min-width: 992px){
+    .container{
+        width: 780px;
+    }
+}
