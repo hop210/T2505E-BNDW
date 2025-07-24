@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asm3</title>
+    <link rel="stylesheet" href="css/asm3.css">
+</head>
+<body>
+    <header>
+        <h2>BONOBOS</h2>
+        <div class="steps">
+            <span class="step active">1</span> Shipping
+            <span class="separator">→</span>
+            <span class="step">2</span> Billing
+            <span class="separator">→</span>
+            <span class="step">3</span> Review
+        </div>
+
+    </header>
+    <main>
+        <div class="container">
+        <div class="a-left">
+            <h4>Shipping Address</h4>
+        <form method="get" action="#">
+            <div class="cot">
+                <div class="form-group">
+                    <input type="text" name="firstname" required placeholder=" ">
+                    <label for="firstname">First Name*</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" name="lastname" required placeholder=" ">
+                    <label for="lastname">Last Name*</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="addressline1">Address Line 1*</label><br>
+                <input type="text" name="addressline1" placeholder=" " required>
+            </div>
+
+            <div class="form-group">
+                <label for="addressline2">Address Line 2</label><br>
+                <input type="text" name="addressline2" >
+            </div>
+
+            <div class="cotinput">
+                <div class="form-group">
+                <select name="country" required>
+                    <option value="vietnam">Việt Nam</option>
+                    <option value="laos">Lào</option>
+                    <option value="China">Trung Quốc</option>
+                    <option value="korea">Hàn Quốc</option>
+                </select>
+                <label for="Country">Country*</label>
+                </div>
+
+                <div class="form-group">
+                <input type="text" name="city" required>
+                <label for="city">City*</label>
+                </div>
+            </div>
+            
+            <div class="cotinput">
+                <div class="form-group">
+                <select name="state" required>
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="danang">Đà Nẵng</option>
+                    <option value="hochiminh">Hồ Chí Minh</option>
+                    <option value="khanhhoa">Khánh Hòa</option>
+                </select>
+                <label for="state">State*</label>
+                </div>
+                
+                <div class="form-group">
+                <input type="text" name="zip" required>
+                <label for="zip">Zip*</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" name="telephone" placeholder=" " required>
+                <label for="telephone">Phone Number*</label>
+            </div>
+
+            <div class="checkbox-group">
+                <input type="checkbox" name="makeDefault">
+                <label for="makeDefault">Make Default</label>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn-continue">Continue To Billing Information</button>
+            </div>
+        </form>
+        </div>
+
+        <div class="a-right">
+            <div>
+                <h4>Order Summary</h4>
+                <p>#312243643</p>
+                <div class="cot">
+                <p>Items</p><p>1</p>
+                </div>
+                <div class="cot">
+                <p>Total</p><p>$68.00</p>
+                </div>
+            </div>
+            <div>
+                <h4>Order Details</h4>
+            </div>
+            <div class="cotanh">
+                <div>
+                <img src="../b1/images/ao1.png" >
+                </div>
+                <div class="luisangti">
+                    <b>T-Shirt Button-Down</b>
+                    <p>Reg"XL in Black, Tailored</p>
+                    <p>Qty 1</p>
+                    <p>$68.00</p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+</body>
+</html>
