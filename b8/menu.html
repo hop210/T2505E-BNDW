@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo Menu</title>
+    <link rel="stylesheet" href="css/menu.css">
+</head>
+<body>
+
+    <nav>
+        <ul class="menu">
+            <li class="item" id="item-1" onmouseenter="openMenu(1)" onmouseleave="closeMenu(1)">
+                <a href="#">Tin tức</a>
+                <ul class="submenu">
+                    <li><a href="#">Chính trị - Xã hội</a></li>
+                    <li><a href="#">Tra cứu phường xã</a></li>
+                </ul>
+            </li>
+            <li class="item" id="item-2" onmouseenter="openMenu(2)" onmouseleave="closeMenu(2)">
+                <a href="#">Kinh doanh</a>
+                <ul class="submenu"> 
+                    <li><a href="#">Tài chính</a></li>
+                    <li><a href="#">Chứng khoán</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <script type="text/javascript">
+        function openMenu(n){
+            var item = document.getElementById("item-"+n);
+            item.classList.add("active");
+        }
+        function closeMenu(n){
+            var item = document.getElementById("item-"+n);
+            item.classList.remove("active");
+        }
+    </script>
+</body>
+</html>
