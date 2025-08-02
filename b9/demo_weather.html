@@ -4,12 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        div{
+            margin: 5px;
+        }
+    </style>
 </head>
 <body>
     <main class="section main">
+        <input id="city" name="city" placeholder="enter your city" onkeyup="searchWeather()">
         <div class="container">
-            
+            <div>
+                <img id="icon" src="#" >
+            </div>
+            <div>
+                <h1><span id="temp"></span> C</h1>
+            </div>
+            <div>
+                <p>feel like: <span id="feels_like">0</span>%</p>
+                <p>humidity: <span id="humidity"></span>%</p>
+                <p>wind: <span id="wind"></span>km/h</p>
+            </div>
         </div>
     </main>
+
+<script type="text/javascript">
+    function searchWeather(){
+        if(event.keyCode == 13){
+        var ip = document.getElementById("city");
+        var city = ip.value;
+
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+        fetch(url).then(rs=>rs.json())
+        .then(rs=>{
+        document.getElementById("temp").innerText = rs.main.temp;
+        document.getElementById("feels_like").innerText = rs.main.feels_like;
+        document.getElementById("humidity").innerText = rs.main.humidity;
+        document.getElementById("wind").innerText = rs.wind.speed;
+         for ( var i=0;i<rs.weather.length;i++){
+           var  icon = rs.weather[i].icon;
+            document.getElementById("icon").src = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+          }
+        })
+        }
+        }
+</script>
+
 </body>
 </html>
