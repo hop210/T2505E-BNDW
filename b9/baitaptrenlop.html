@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B9 Bai1</title>
+</head>
+<body>
+    <main class="section main">
+        <div class="container">
+            <div>
+                <img id="image" src="#" >
+            </div>
+            <div>
+                <h1><span id="temp"></span></h1>
+            </div>
+            <div>
+                <p>precipitation: <span id="precipitation">0</span>%</p>
+                <p>humidity: <span id="humidity"></span>%</p>
+                <p>wind: <span id="wind"></span>km/h</p>
+            </div>
+        </div>
+    </main>
+
+<script type="text/javascript">
+    const url = "http://127.0.0.1:5500/b9/json/baitaptrenlop.json";
+        fetch(url).then(rs=>rs.json())
+        .then(rs=>{
+        document.getElementById("image").src = rs.image;
+        document.getElementById("temp").innerText = rs.main.temp;
+        document.getElementById("precipitation").innerText = rs.main.feels_like;
+        document.getElementById("humidity").innerText = rs.main.humidity;
+        document.getElementById("wind").innerText = rs.wind.speed;
+        })
+</script>
+</body>
+</html>

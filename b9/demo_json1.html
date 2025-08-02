@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/demo_json.css">
+</head>
+<body>
+    <main class="section main">
+        <div class="container">
+            <img id="sp_image" src="#" width="400px" >
+            <h1 id="sp_name">Váy thời trang cao cấp dành cho hoa hậu</h1>
+            <p>Giá tiền: <span id="sp_price">12</span>$</p>
+            <p>Số lượng: <span id="sp_qty">3</span></p>
+            <p>Rate: <span id="rating">0</span></p>
+        </div>
+    </main>
+
+    <script type="text/javascript">
+        // call API và sử dụng dữ liệu từ api vào giao diện
+        const url = "http://127.0.0.1:5500/b9/json/sanpham.json";
+        fetch(url).then(rs=>rs.json())
+        .then(rs=>{
+            // lấy dữ liệu của json và sử dụng trong này    
+          //  console.log(rs);
+          var sp_name = document.getElementById("sp_name");
+        sp_name.innerText = sp.name;
+        var sp_price = document.getElementById("sp_price");
+        sp_price.innerText = sp.price;
+     //  var sp_qty = document.getElementById("sp_qty");
+     //   sp_qty.innerText = sp.qty;
+        document.getElementById("sp_qty").innerText = sp.qty;
+        document.getElementById("sp_image").src = sp.thumbnail;
+        document.getElementById("rating").innerText = rs.review.rating;
+        })
+
+        var sp = { // 1 object
+            name: "Túi xách Guici",
+            price: 125,
+            qty:5,
+            thumbnail: "../b1/images/canh-quat.png"
+        }
+    </script>
+</body>
+</html>

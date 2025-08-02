@@ -1,0 +1,9 @@
+{
+    "name": "Đồng hồ Casio",
+    "price":28,
+    "qty":7,
+    "thumbnail": "../b1/images/canh-quat.png",
+    "review": {
+        "rating":5
+    }
+}
