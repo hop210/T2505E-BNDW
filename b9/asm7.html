@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>5-Day Weather Forecast</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f8ff;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin: 20px;
+      width: 300px;
+    }
+
+    .forecast-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .weather-card {
+      background: #007acc;
+      color: white;
+      border-radius: 10px;
+      padding: 10px;
+      width: 180px;
+      text-align: center;
+    }
+
+    .weather-card img {
+      width: 50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>5-Day Weather Forecast</h1>
+  <input id="cityInput" placeholder="Enter your city..." onkeyup="searchForecast(event)">
+  <div class="forecast-container" id="forecastContainer"></div>
+
+  <script>
+    async function getForecast(city) {
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=09a71427c59d38d6a34f89b47d75975c&units=metric`;
+      const response = await fetch(url);
+      const data = await response.json();
+
+      const container = document.getElementById("forecastContainer");
+      container.innerHTML = "";
+
+      data.list.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "weather-card";
+
+        const date = new Date(item.dt * 1000);
+        const timeStr = date.toLocaleString('en-GB', {
+          year: 'numeric', month: '2-digit', day: '2-digit',
+          hour: '2-digit', minute: '2-digit'
+        });
+
+        card.innerHTML = `
+          <h4>${timeStr}</h4>
+          <h3>${item.main.temp.toFixed(2)}°C</h3>
+          <img src="https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png" alt="">
+          <p>${item.weather[0].description}</p>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function searchForecast(event) {
+      if (event.keyCode === 13) {
+        const city = document.getElementById("cityInput").value;
+        if (city) {
+          getForecast(city);
+        }
+      }
+    }
+  </script>
+</body>
+</html>
