@@ -1,0 +1,56 @@
+{
+  "categories": [
+    "Action",
+    "Adventure",
+    "Romance",
+    "Documentary",
+    "War",
+    "Sport",
+    "Musical",
+    "Family"
+  ],
+  "featured": {
+    "videoId": "fXmAurh012s",
+    "description": [
+      "Arcane is a critically acclaimed animated series produced by Riot Games and Fortiche Production, set in the League of Legends universe.",
+      "The series serves as a prequel to the game, diving deep into the backstories of well-known champions such as Vi, Jinx, Jayce, and Viktor.",
+      "Set in the twin cities of Piltover and Zaun, Arcane explores themes of class division, technological progress, and the personal consequences of war and ambition.",
+      "With groundbreaking animation, Arcane combines hand-painted textures with dynamic 3D animation, delivering a unique visual style unlike anything seen before in animated television.",
+      "Its powerful narrative is built around sisterhood, betrayal, trauma, and redemption, making it compelling even for audiences unfamiliar with the game.",
+      "Critics have praised Arcane for its mature storytelling, emotional depth, and a hauntingly beautiful soundtrack that complements its dramatic tone.",
+      "Arcane isn't just a show for gamers—it has set a new bar for video game adaptations and animated storytelling alike."
+    ]
+  },
+  "movies": [
+    {
+      "title": "The Post",
+      "img": "img/The_Post_(film).png",
+      "stars": 4
+    },
+    {
+      "title": "The Godfather",
+      "img": "img/thegodfather.jpg",
+      "stars": 5
+    },
+    {
+      "title": "Titanic",
+      "img": "img/titanic.jpg",
+      "stars": 5
+    },
+    {
+      "title": "Lion",
+      "img": "img/thelionking.jpg",
+      "stars": 4
+    },
+    {
+      "title": "Avatar",
+      "img": "img/avatar.jpg",
+      "stars": 4
+    },
+    {
+      "title": "Parasite",
+      "img": "img/parasite.jpg",
+      "stars": 5
+    }
+  ]
+}

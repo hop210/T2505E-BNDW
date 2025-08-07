@@ -1,0 +1,34 @@
+{
+  "movies": [
+    {
+      "title": "The Post",
+      "img": "img/The_Post_(film).png",
+      "stars": 4
+    },
+    {
+      "title": "The Godfather",
+      "img": "img/thegodfather.jpg",
+      "stars": 5
+    },
+    {
+      "title": "Titanic",
+      "img": "img/titanic.jpg",
+      "stars": 5
+    },
+    {
+      "title": "Lion",
+      "img": "img/thelionking.jpg",
+      "stars": 4
+    },
+    {
+      "title": "Avatar",
+      "img": "img/avatar.jpg",
+      "stars": 4
+    },
+    {
+      "title": "Parasite",
+      "img": "img/parasite.jpg",
+      "stars": 5
+    }
+  ]
+}
