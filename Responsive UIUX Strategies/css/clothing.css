@@ -1,0 +1,46 @@
+/* Đảm bảo tất cả các card đều cao bằng nhau */
+.item {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.item .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+/* Ảnh luôn vừa khung và không bị méo */
+.item img {
+    width: 100%;
+    height: 200px; /* bạn có thể chỉnh lại theo ý */
+    object-fit: cover; /* cắt ảnh cho vừa */
+    border-radius: 5px;
+}
+
+/* Tiêu đề sản phẩm */
+.item h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Giới hạn mô tả chỉ hiển thị 4 dòng và thêm ... */
+.item p:nth-of-type(3) {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* số dòng muốn hiển thị */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    min-height: 2.8em; /* đảm bảo chiều cao cố định */
+}
+
+/* Nút Add to cart */
+.item button {
+    margin-top: auto;
+    width: 100%;
+}
